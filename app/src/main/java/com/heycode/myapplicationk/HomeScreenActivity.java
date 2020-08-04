@@ -38,6 +38,7 @@ public class HomeScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
         mFirebaseAuth = FirebaseAuth.getInstance();
 
@@ -46,13 +47,14 @@ public class HomeScreenActivity extends AppCompatActivity {
         name = findViewById(R.id.data_3);//Name
         regNo = findViewById(R.id.data_4);//Registration No
         mListView = findViewById(R.id.list_view);
+        save_data = findViewById(R.id.save_data);
 
         mArrayList = new ArrayList<>();
-        mArrayAdapter = new ArrayAdapter<String>(HomeScreenActivity.this, android.R.layout.simple_list_item_1, mArrayList);
+        mArrayAdapter = new ArrayAdapter<>(HomeScreenActivity.this, android.R.layout.simple_list_item_1, mArrayList);
         mListView.setAdapter(mArrayAdapter);
 
 
-        save_data = findViewById(R.id.save_data);
+
         save_data.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -67,6 +69,7 @@ public class HomeScreenActivity extends AppCompatActivity {
 
     }
 
+    //Reading data from database
     public void readData(View view){
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -91,7 +94,7 @@ public class HomeScreenActivity extends AppCompatActivity {
         });
     }
 
-    //Save Data
+    //Saving Data with SAVE BUTTON
     public void saveData() {
         String phone1 = phone.getText().toString();
         String address1 = address.getText().toString();

@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class SigninActivity extends AppCompatActivity {
     EditText email, password;
@@ -35,6 +36,14 @@ public class SigninActivity extends AppCompatActivity {
         forget_txt = findViewById(R.id.forget_txt);
         mFirebaseAuth = FirebaseAuth.getInstance();
 
+        //Login Screen skip if already logged in
+        FirebaseUser user = mFirebaseAuth.getCurrentUser();
+        if(user!=null){
+            finish();
+            startActivity(new Intent(SigninActivity.this, HomeScreenActivity.class));
+        }
+
+        //Goto registration screen if not have ACCOUNT
         signup_txt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +56,7 @@ public class SigninActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(email.toString().length() !=0){
-                    mFirebaseAuth.sendPasswordResetEmail(email.toString().trim())
+                    mFirebaseAuth.sendPasswordResetEmail(email.toString())
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
