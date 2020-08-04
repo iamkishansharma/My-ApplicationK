@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/signup_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sign Up Screen"
+        android:background="#000"
+        android:textSize="30sp"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp">
+        <EditText
+            android:id="@+id/signup_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+        <EditText
+            android:id="@+id/signup_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:padding="15dp" />
+
+        <EditText
+            android:id="@+id/signup_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="15dp" />
+
+        <Button
+            android:id="@+id/signup_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:text="Sign Up"
+            android:onClick="createUser"
+            android:textAllCaps="false"
+            android:textColor="#084706"
+            android:textSize="17sp"/>
+        <TextView
+            android:id="@+id/signin_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have Account?\nSign In Here"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"/>
+    </LinearLayout>
+
+</LinearLayout>
+

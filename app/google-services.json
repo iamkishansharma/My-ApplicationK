@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "107023660036",
+    "firebase_url": "https://my-applicationk-29d60.firebaseio.com",
+    "project_id": "my-applicationk-29d60",
+    "storage_bucket": "my-applicationk-29d60.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:107023660036:android:776d0db91022ec10a73151",
+        "android_client_info": {
+          "package_name": "com.heycode.myapplicationk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "107023660036-3ks1slb4fkh5c1u5i7dhp2rr7r3tvbi8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLzWydl3RH6oPNzIyffqEShZVlZlpSDX0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "107023660036-3ks1slb4fkh5c1u5i7dhp2rr7r3tvbi8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
