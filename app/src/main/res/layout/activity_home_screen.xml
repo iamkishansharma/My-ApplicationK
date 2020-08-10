@@ -7,6 +7,12 @@
     tools:context=".HomeScreenActivity"
     android:orientation="vertical"
     android:gravity="center_horizontal">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg"
+        />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

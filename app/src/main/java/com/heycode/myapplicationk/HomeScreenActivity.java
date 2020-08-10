@@ -2,9 +2,12 @@ package com.heycode.myapplicationk;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -38,6 +41,10 @@ public class HomeScreenActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setTitle("Home Screen");
+        setSupportActionBar(toolbar);
 
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
         mFirebaseAuth = FirebaseAuth.getInstance();
@@ -112,5 +119,23 @@ public class HomeScreenActivity extends AppCompatActivity {
         FirebaseAuth.getInstance().signOut();
         startActivity(new Intent(HomeScreenActivity.this, SigninActivity.class));
         finish();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId() ){
+            case R.id.goto_storage:startActivity(new Intent(HomeScreenActivity.this,StorageExActivity.class));
+                return true;
+            case R.id.goto_storage2:startActivity(new Intent(HomeScreenActivity.this,Upload2ExActivity.class));
+                return true;
+
+        }
+        return false;
     }
 }

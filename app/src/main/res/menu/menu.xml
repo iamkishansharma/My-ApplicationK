@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/goto_storage"
+        android:title="Goto Storage"/>
+    <item
+        android:id="@+id/goto_storage2"
+        android:title="Goto Storage 2"/>
+
+</menu>

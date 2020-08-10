@@ -11,11 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name="HomeScreenActivity"/>
-        <activity android:name="MainActivity">
-
-        </activity>
-        <activity android:name="SigninActivity" >
+        <activity android:name=".Upload2ExActivity"></activity>
+        <activity android:name=".StorageExActivity" />
+        <activity android:name=".HomeScreenActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SigninActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
