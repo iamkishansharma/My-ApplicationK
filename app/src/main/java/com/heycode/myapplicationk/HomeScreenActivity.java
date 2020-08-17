@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -37,6 +40,7 @@ public class HomeScreenActivity extends AppCompatActivity {
     ArrayList<String> mArrayList;
     ArrayAdapter<String> mArrayAdapter;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +52,7 @@ public class HomeScreenActivity extends AppCompatActivity {
 
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
         mFirebaseAuth = FirebaseAuth.getInstance();
+
 
         phone = findViewById(R.id.data_1);//phone
         address = findViewById(R.id.data_2);//Address
@@ -133,6 +138,8 @@ public class HomeScreenActivity extends AppCompatActivity {
             case R.id.goto_storage:startActivity(new Intent(HomeScreenActivity.this,StorageExActivity.class));
                 return true;
             case R.id.goto_storage2:startActivity(new Intent(HomeScreenActivity.this,Upload2ExActivity.class));
+                return true;
+            case R.id.goto_animation:startActivity(new Intent(HomeScreenActivity.this, AnimationActivity.class));
                 return true;
 
         }

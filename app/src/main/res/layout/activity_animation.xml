@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AnimationActivity"
+    android:orientation="vertical"
+    android:id="@+id/linear_home"
+    android:gravity="center"
+    android:background="@drawable/anim_list">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Animate this Text !"
+        android:id="@+id/anim_text"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Blink"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/btn_blink"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fade In"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/btn_fadeIn"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fade Out"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_fadeOut"
+        android:textColor="@android:color/white"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zoom In"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:textColor="@android:color/white"
+        android:id="@+id/btn_zoomIn"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zoom Out"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_zoomOut"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Rotate"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_rotate"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Move Right"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_move_right"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Move Left"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_move_left"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bounce"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_bounce"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Try Many Anim"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_try_anim"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+
+</LinearLayout>

@@ -6,5 +6,8 @@
     <item
         android:id="@+id/goto_storage2"
         android:title="Goto Storage 2"/>
+    <item
+        android:id="@+id/goto_animation"
+        android:title="Goto Animation"/>
 
 </menu>
