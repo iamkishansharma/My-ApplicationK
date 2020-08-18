@@ -9,14 +9,19 @@
     android:id="@+id/linear_home"
     android:gravity="center"
     android:background="@drawable/anim_list">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Animate this Text !"
-        android:id="@+id/anim_text"
-        style="@style/TextAppearance.AppCompat.Large"
-        android:textStyle="bold"
-        android:gravity="center"/>
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Animate this Text !"-->
+<!--        android:id="@+id/anim_text"-->
+<!--        style="@style/TextAppearance.AppCompat.Large"-->
+<!--        android:textStyle="bold"-->
+<!--        android:gravity="center"/>-->
+    <ImageView
+        android:id="@+id/anim_image"
+        android:layout_width="160dp"
+        android:layout_height="200dp"
+        android:background="@drawable/image_anim_list"/>
 
     <Button
         android:layout_width="match_parent"
@@ -125,6 +130,17 @@
         android:background="@drawable/btn_shape"
         android:layout_margin="5dp"
         android:id="@+id/btn_try_anim"
+        android:foreground="?attr/selectableItemBackground"
+        android:focusable="true"
+        android:clickable="true"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Many Image Anim"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn_shape"
+        android:layout_margin="5dp"
+        android:id="@+id/btn_all_anim_image"
         android:foreground="?attr/selectableItemBackground"
         android:focusable="true"
         android:clickable="true"/>
